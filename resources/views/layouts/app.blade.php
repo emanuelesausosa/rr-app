@@ -8,7 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
 
     <!-- Page title -->
-    <title>LUNA | @yield('title')</title>
+    <title>RR - App | @yield('title')</title>
 
     <!-- Vendor styles -->
     <link rel="stylesheet" href="{{ asset('css/vendor/fontawesome/css/font-awesome.css')}}"/>

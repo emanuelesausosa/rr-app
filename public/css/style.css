@@ -1153,6 +1153,10 @@ img.image-xl {
 .profil-link .profile-address {
     text-transform: lowercase;
 }
+.profil-link .profile-logout {
+    text-transform: lowercase;
+}
+
 #mobile-menu {
     display: none;
 }

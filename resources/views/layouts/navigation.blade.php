@@ -5,12 +5,21 @@
                 Main
             </li>
             <li class="active">
-                <a href="index.html">Index</a>
+                <a href="{{route('inicio')}}">Index</a>
+            </li>
+            <li class="active">
+                <a href="{{route('other')}}">Other</a>
+            </li>
+            <li class="nav-category">
+                Config
+            </li>
+            <li class="active">
+                <a href="{{route('register-user')}}">Registro usuarios</a>
             </li>
 
             <li class="nav-info">
                 <div class="m-t-xs">
-                    <span class="c-white">Example</span> text.
+                    <span class="c-white">RR-app 2018</span>
                     <br/>
                     <!-- HOW TO REMOVE THIS SECTION -->
                     <!--<span>
