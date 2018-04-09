@@ -49,7 +49,16 @@
                             <label>Repeat Password</label>
                             <input type="password" value="" id="password_confirmation" class="form-control" name="password_confirmation" required>
                             <span class="help-block small">Please repeat your pasword</span>
-                        </div>                       
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>Role</label>
+                            <select class="select2_demo_1 form-control" style="width: 100%" name="roles">
+                                @foreach($roles as $item)
+                                    <option value="{{$item->slug}}">{{$item->name}}</option>                                
+                                @endforeach
+                            </select>
+                            <span class="help-block small">Please choice a role</span>
+                        </div>   
                     </div>
                     <div>
                         <button class="btn btn-accent pull-right">Register</button>                        

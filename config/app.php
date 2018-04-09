@@ -151,6 +151,7 @@ return [
          * Package Service Providers...
          */
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
          * Application Service Providers...

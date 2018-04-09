@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 use Sentinel;
 
 // Author: Emanuel Sosa
@@ -16,8 +17,15 @@ class ConfigurationsController extends Controller
     // es: Acción que registra un usuario
     // en: Action/Function that register an user
     public function Register() {
-        return View('configurations.register');
+
+        // get role list
+        $roles = Sentinel::getRoleRepository()->get();
+
+        // return view with roles
+        return View('configurations.register')->with('roles', $roles);
     }
+
+
 
     // POST
     // action: StoreRegister
@@ -25,9 +33,20 @@ class ConfigurationsController extends Controller
     // en: Action/Function that register an user
     public function StoreRegister(Request $request) {
         
+        // save user
         $user = Sentinel::registerAndActivate($request->all());
-        
+
+        //find role
+        $roles = Sentinel::findRoleBySlug($request->roles);
+
+        //bind to role to user
+        $roles->users()->attach($user);
+
+
+
+        // return view result
         return View('configurations.register-result')->with('user', $user);
-    }   
+        //return dd($request->all());
+    }
 
 }
